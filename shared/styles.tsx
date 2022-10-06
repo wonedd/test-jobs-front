@@ -1,19 +1,59 @@
-import { css, Global } from "@emotion/react";
+import { css, Global } from '@emotion/react';
+
+export const media = {
+    maxMobile: '@media(max-width:800px)',
+    minlaptop: '@media(min-width: 800px)',
+};
 
 export const globalStyles = (
     <Global
         styles={css`
-            html,
-            body {
-                box-sizing: border-box;
-                padding: 0;
+            * {
                 margin: 0;
-                background: #222;
-                min-height: 100%;
-                font-family: "Poppins", sans-serif;
-                font-size: 16px;
-                color: #f7f7f7;
-                line-height: 200%;
+                padding: 0;
+                outline: 0;
+                box-sizing: border-box;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            @media (max-width: 1080px) {
+                html {
+                    font-size: 93.75%;
+                }
+            }
+            @media (max-width: 720px) {
+                html {
+                    font-size: 87.5%;
+                }
+            }
+
+            body {
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+                overflow-x: hidden;
+            }
+
+            body,
+            input,
+            button {
+                font-size: 14px;
+                font-family: 'Poppins', sans-serif;
+            }
+            button {
+                cursor: pointer;
+            }
+            body::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            body::-webkit-scrollbar-track {
+                background: #000;
+            }
+
+            body::-webkit-scrollbar-thumb {
+                background-color: #000;
+                border-radius: 20px;
             }
         `}
     />
