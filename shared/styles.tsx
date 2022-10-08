@@ -32,6 +32,7 @@ export const globalStyles = (
                 -webkit-font-smoothing: antialiased;
                 text-rendering: optimizeLegibility;
                 overflow-x: hidden;
+                padding-bottom: 32px;
             }
 
             body,
@@ -54,6 +55,12 @@ export const globalStyles = (
             body::-webkit-scrollbar-thumb {
                 background-color: #000;
                 border-radius: 20px;
+            }
+
+            @keyframes loading {
+                to {
+                    transform: rotate(1turn);
+                }
             }
         `}
     />

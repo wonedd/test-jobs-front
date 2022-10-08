@@ -14,9 +14,9 @@ interface CardProps {
 export function Card({ job }: CardProps) {
     return (
         <Container>
-            <h2>{job.jobTitle}</h2>
-            <p>{job.companyName}</p>
-            <p>{job.snippets}</p>
+            <h2>{job?.jobTitle}</h2>
+            <p>{job?.companyName}</p>
+            <p>{job?.snippets}</p>
         </Container>
     );
 }
